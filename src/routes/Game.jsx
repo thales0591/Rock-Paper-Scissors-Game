@@ -68,8 +68,8 @@ function Game({ pScore, setscore }) {
    return(
       location.state ? 
       (<>
-      <div className="w-full h-[60%] flex flex-col justify-center animate-slideDown">
-         <div className="flex justify-between ">
+      <div className="w-full h-[60%] flex flex-col justify-center animate-slideDown lg:hidden">
+         <div className="flex justify-between lg:hidden">
             <h1 className="font-passion text-2xl text-sky-700 w-20 text-wrap text-center ml-[10%]">Player 1 (you):</h1>
             <h1 className="font-passion text-2xl text-sky-700 w-20 text-wrap text-center mr-[10%]">Player 2 (machine):</h1>
          </div>
@@ -91,18 +91,32 @@ function Game({ pScore, setscore }) {
          
          </div>
       </div>
-      <div className="bg-red-500 w-full h-[32rem] hidden lg:flex items-center justify-between "> 
 
-         {player == "rock" && (
-            <img src={bsrock} alt="rock hand image" />)}
-         {player == "paper" && (
-            <img src={bspaper} alt="paper hand image" />)}
-         {player == "scissor" && (
-            <img src={bsscissor} alt="scissor hand image" />)}
-
-         <h1>{gameResult()}</h1>
+      <div className="w-full h-[60%] lg:flex flex-col justify-center animate-slideDown hidden  ">
          
-         <img src={checkMachinePlay()} alt="" />
+
+         <div className="flex justify-between">
+            <h1 className="font-passion text-4xl text-sky-700 w-36 text-wrap text-center ml-[10%]">Player 1 (you):</h1>
+            <h1 className="font-passion text-4xl text-sky-700 w-36 text-wrap text-center mr-[10%]">Player 2 (machine):</h1>
+         </div>
+
+         <div className=" w-full h-[18rem] hidden lg:flex items-center justify-around "> 
+
+            {player == "rock" && (
+               <img src={bsrock} alt="rock hand image" />)}
+            {player == "paper" && (
+               <img src={bspaper} alt="paper hand image" />)}
+            {player == "scissor" && (
+               <img src={bsscissor} alt="scissor hand image" />)}
+
+            <div className="flex flex-col justify-center items-center gap-10 mt-28  ">
+               <h1 className="font-passion text-sky-700 text-4xl ">{gameResult()}</h1>
+               <BtnPlayAgain />
+            </div>
+
+            <img src={checkMachinePlay()} alt="" />
+
+         </div>
 
       </div>
       </>)
