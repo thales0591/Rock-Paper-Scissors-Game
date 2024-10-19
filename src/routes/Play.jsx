@@ -7,7 +7,7 @@ import bsscissor from "../assets/bs-scissor.png"
 import { Link } from "react-router-dom"
 
 
-function Play ({ pScore, pSetScore }) {
+function Play () {
 
     const moves = ['rock', 'paper', 'scissor'];
 

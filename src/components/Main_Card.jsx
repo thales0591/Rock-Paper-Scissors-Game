@@ -15,8 +15,8 @@ function Main_Card() {
                 < Header pScore={playerScore} />
                 <Routes>
                     <Route path="/" 
-                    element={<Play pScore={playerScore} pSetScore={setPlayerScore} />} />
-                    <Route path="/game" element={<Game />}/>
+                    element={<Play />} />
+                    <Route path="/game" element={<Game pScore={playerScore} setscore={setPlayerScore}/>}/>
                     <Route path="*" element={<ErrorPage />}/>
                 </Routes>
             </div>
