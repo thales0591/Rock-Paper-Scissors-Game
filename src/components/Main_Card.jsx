@@ -8,15 +8,19 @@ import Game from "../routes/Game"
 function Main_Card() {
 
     const [playerScore, setPlayerScore] = useState(0);
+    const [rockMoves, setRockMoves] = useState(0);
 
     return (
         <div className="bg-blue-800 h-screen flex justify-center items-center ">
             <div className=" bg-white w-10/12 h-[90%] rounded-2xl shadow-2xl flex flex-col items-center">
-                < Header pScore={playerScore} />
+                < Header pScore={playerScore} rockMoves={rockMoves} setRockMoves={setRockMoves} />
                 <Routes>
                     <Route path="/" 
                     element={<Play />} />
-                    <Route path="/game" element={<Game pScore={playerScore} setscore={setPlayerScore}/>}/>
+                    <Route path="/game" 
+                    element={<Game 
+                    pScore={playerScore} setscore={setPlayerScore} 
+                    rockMoves={rockMoves} setRockMoves={setRockMoves} />}/>
                     <Route path="*" element={<ErrorPage />}/>
                 </Routes>
             </div>
