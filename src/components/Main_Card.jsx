@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useState } from "react";
 import ErrorPage from "../routes/ErrorPage";
 import Game from "../routes/Game"
+import Footer from "./Footer";
 
 function Main_Card() {
 
@@ -23,6 +24,7 @@ function Main_Card() {
                     rockMoves={rockMoves} setRockMoves={setRockMoves} />}/>
                     <Route path="*" element={<ErrorPage />}/>
                 </Routes>
+                <Footer />
             </div>
         </div>
     )
