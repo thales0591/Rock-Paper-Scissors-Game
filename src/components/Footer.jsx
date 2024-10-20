@@ -22,7 +22,7 @@ function Footer() {
             {isOpen && (
                 <div className="fixed inset-0  bg-black bg-opacity-50 flex justify-center items-center z-10">
             
-                <div className="bg-white p-6 rounded-lg shadow-lg relative w-1/3 animate-slideDown">
+                <div className="bg-white p-6 rounded-lg shadow-lg relative w-2/3 animate-slideDown">
                   <h2 className="text-xl font-bold mb-4">Rules</h2>
                   <p><span className="mb-4 font-bold">1. Rock beats Scissors: </span> <span>Rock can crush scissors.</span></p>
                   <p><span className="mb-4 font-bold">2. Scissors beat Paper: </span> <span>Scissors can cut through paper.</span></p> 
