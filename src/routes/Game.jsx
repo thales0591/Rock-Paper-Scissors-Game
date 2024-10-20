@@ -13,7 +13,7 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
 
    const location = useLocation();
    const {machine, player} = location.state || {};
-   const [result, setResult] = useState('');
+   const [result, setResult] = useState(null);
 
    useEffect(() => {
       setResult(gameResult())
@@ -123,7 +123,7 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
             
             <div className="flex flex-col items-center gap-5 text-center">
 
-               <div className="w-full">
+               <div className="w-[240px]">
                   <h1 className="font-passion text-4xl text-sky-700">Player 1</h1>
                   <h1 className="font-passion text-4xl text-sky-700">(you):</h1>
                </div>
@@ -144,7 +144,7 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
 
             <div className="flex flex-col items-center text-center gap-5">
 
-               <div className="w-full">
+               <div className="w-[240px]">
                   <h1 className="font-passion text-4xl text-sky-700">Player 2</h1>
                   <h1 className="font-passion text-4xl text-sky-700">(machine):</h1>
                </div>
