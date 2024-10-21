@@ -32,7 +32,10 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
    }
    
    function gameResult() {
-      if (player == "rock") {
+      if (player == machine) {
+         return "It's a draw!"
+      }
+      else if  (player == "rock") {
          if (rockMoves == 1) {
             return "movement not allowed"
          }
@@ -45,7 +48,6 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
             setscore(pScore + 1)
             return "You won :D"
          }
-         return "It's a draw!"
       }
       else if (player == "paper") {
          setRockMoves(0);
@@ -56,7 +58,6 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
          if (machine == "scissor") {
             return "You lost :/"
          }
-         return "It's a draw!"
       }
       else {
          setRockMoves(0);
@@ -67,7 +68,6 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
             setscore(pScore + 1)
             return "You won :D"
          }
-         return "It's a draw!"
       }
    }
 
