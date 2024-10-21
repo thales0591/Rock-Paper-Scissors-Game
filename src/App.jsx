@@ -1,14 +1,13 @@
-import { Outlet } from "react-router-dom"
-import Header from "./components/Header"
-import Main_Card from "./components/Main_Card"
+import { BrowserRouter as Router} from 'react-router-dom';
+import Main_Card from './components/Main_Card';
 
 function App() {
+
   return (
     <>
-      <Main_Card 
-      header={< Header />} 
-      content={< Outlet />} 
-      />
+      <Router>
+        <Main_Card />
+      </Router>
     </>
   )
 }
