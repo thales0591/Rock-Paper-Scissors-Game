@@ -13,7 +13,7 @@ function Main_Card() {
 
     return (
         <div className="bg-blue-800 h-screen flex justify-center items-center ">
-            <div className=" bg-white w-10/12 h-[90%] rounded-2xl shadow-2xl flex flex-col items-center">
+            <div className=" bg-white w-10/12 h-[95%] overflow-y-auto rounded-2xl shadow-2xl flex flex-col items-center">
                 < Header pScore={playerScore} rockMoves={rockMoves} setRockMoves={setRockMoves} />
                 <Routes>
                     <Route path="/" 

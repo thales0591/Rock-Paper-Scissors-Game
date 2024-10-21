@@ -14,7 +14,7 @@ function Footer() {
 
     return (
 
-        <div className=" w-full h-[15%] flex justify-center items-center">
+        <div className=" w-full h-[15%] flex justify-center items-center mb-5">
             <button className="px-10 py-2 border-2 border-white rounded-xl text-base font-play font-bold bg-indigo-600 hover:bg-indigo-800 text-white"
             onClick={openModal}
             >Rules</button>

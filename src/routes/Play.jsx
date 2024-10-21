@@ -21,7 +21,7 @@ function Play () {
         <h1 className="font-passion text-sky-700 text-[38px] lg:text-[50px]">Make your move!</h1>
     </div>
 
-    <div className="text-center h-[32rem] w-full flex flex-col justify-around items-center lg:flex-row lg:hidden">
+    <div className="text-center h-[32rem] w-full flex flex-col justify-around items-center lg:flex-row lg:hidden gap-10 mt-5 mb-10">
 
         <Link to="/game" 
         state={{player: "rock", machine: machineMove()}}>
