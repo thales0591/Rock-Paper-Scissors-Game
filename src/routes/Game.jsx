@@ -33,40 +33,48 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
    
    function gameResult() {
       if (player == machine) {
-         return "It's a draw!"
-      }
-      else if  (player == "rock") {
-         if (rockMoves == 1) {
+         if (player == "rock" && rockMoves == 1) {
             return "movement not allowed"
          }
-         setRockMoves(rockMoves + 1);
-         if (machine == "paper") {
-            
-            return "You lost :/"
+         if (player == "rock") {
+            setRockMoves(rockMoves + 1)
          }
-         if (machine == "scissor") {
-            setscore(pScore + 1)
-            return "You won :D"
-         }
-      }
-      else if (player == "paper") {
-         setRockMoves(0);
-         if (machine == "rock") {
-            setscore(pScore + 1)
-            return "You won :D"
-         }
-         if (machine == "scissor") {
-            return "You lost :/"
-         }
+         rockMoves == 1 && setRockMoves(0)
+         return "It's a draw!"
       }
       else {
-         setRockMoves(0);
-         if (machine == "rock") {
-            return "You lost :/"
+         if (player == "rock") {
+            if (rockMoves == 1) {
+               return "movement not allowed"
+            }
+            setRockMoves(rockMoves + 1);
+            if (machine == "paper") {
+               return "You lost :/"
+            }
+            if (machine == "scissor") {
+               setscore(pScore + 1)
+               return "You won :D"
+            }
          }
-         if (machine == "paper") {
-            setscore(pScore + 1)
-            return "You won :D"
+         else if (player == "paper") {
+            setRockMoves(0);
+            if (machine == "rock") {
+               setscore(pScore + 1)
+               return "You won :D"
+            }
+            if (machine == "scissor") {
+               return "You lost :/"
+            }
+         }
+         else {
+            setRockMoves(0);
+            if (machine == "rock") {
+               return "You lost :/"
+            }
+            if (machine == "paper") {
+               setscore(pScore + 1)
+               return "You won :D"
+            }
          }
       }
    }
@@ -138,7 +146,7 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
             </div>
 
             <div className="flex flex-col justify-center h-full gap-5 mt-24"> 
-               <h1 className="font-passion text-sky-700 text-4xl">{result}</h1>
+               <h1 className="font-passion text-sky-700 text-4xl">{result} {rockMoves}</h1>
                <BtnPlayAgain text={"Play Again"}/>
             </div>
 
