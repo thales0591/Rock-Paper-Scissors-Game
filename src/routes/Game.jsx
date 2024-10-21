@@ -83,9 +83,9 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
             </div>
          ) : (
          <>
-         <div className="w-full h-[60%] lg:hidden flex flex-row justify-around items-center animate-slideDown">
+         <div className="w-full lg:hidden flex flex-col gap-10 mt-7 mb-7 justify-around items-center animate-slideDown">
 
-            <div className="flex flex-col items-center gap-5 text-center"> 
+            <div className="flex flex-col items-center gap-2 text-center"> 
 
                <div className="w-full">
                   <h1 className="font-passion text-2xl text-sky-700">Player 1</h1>
@@ -101,12 +101,12 @@ function Game({ pScore, setscore, rockMoves, setRockMoves }) {
 
             </div>
 
-            <div className="flex flex-col justify-center items-center gap-5 mt-24">
-                  <h1 className="font-passion text-sky-700 text-3xl ">{result}</h1>
+            <div className="flex flex-col justify-center items-center gap-2 ">
+                  <h1 className="font-passion text-sky-700 text-4xl ">{result}</h1>
                   <BtnPlayAgain text={"Play Again"}/>
             </div>
 
-            <div className="flex flex-col items-center text-center gap-5">
+            <div className="flex flex-col items-center text-center gap-2">
 
                <div className="w-full">
                   <h1 className="font-passion text-2xl text-sky-700">Player 2</h1>
