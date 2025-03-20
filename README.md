@@ -22,7 +22,7 @@ You can access the final version of the webapp at the following link: https://ro
 
 To get started with the Rock, Paper, Scissors game, clone the repository and install the necessary dependencies. You can use the following command:
 
-```git clone https://github.com/thales0591/Rock-Paper-Scissors-Game.gitcd```
+```git clone https://github.com/thales0591/Rock-Paper-Scissors-Game.git```
 
 Then, access the project directory and run the npm install command, for example:
 
